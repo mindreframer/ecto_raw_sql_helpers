@@ -2,9 +2,9 @@ defmodule EctoRawSQLHelpers.Helpers do
   def string_to_atom_if_enabled(string, options) do
     is_enabled?(options)
     |> case do
-        false -> string
-        true -> String.to_atom(string)
-     end
+      false -> string
+      true -> String.to_atom(string)
+    end
   end
 
   defp is_enabled?(options) do
