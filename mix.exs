@@ -12,6 +12,7 @@ defmodule EctoRawSQLHelpers.MixProject do
       aliases: aliases(),
       package: package(),
       description: description(),
+      compilers: [:yecc, :leex] ++ Mix.compilers()
     ]
   end
 
@@ -26,7 +27,7 @@ defmodule EctoRawSQLHelpers.MixProject do
     [
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
       {:pipe_operators, "~> 0.1.1"},
-      {:ecto_sql, ">= 2.0.0"},
+      {:ecto_sql, ">= 3.0.0"},
       {:postgrex, ">= 0.0.0", only: [:test]},
       {:myxql, ">= 0.4.0", only: [:test]},
       {:telemetry_poller, "~> 0.4", only: [:test]}
